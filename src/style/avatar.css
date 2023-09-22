@@ -1,0 +1,10 @@
+.avatar-img {
+    max-width: 250px;
+    box-shadow: 0px 10px 12px rgba(0, 0, 0, 1); /* Added shadow */
+    transition: transform 0.3s ease-in; /* Add a hover effect */
+  }
+  
+  .avatar-img:hover {
+    transform: scale(1.1); /* Enlarge the avatar on hover */
+    box-shadow: 0px 14px 18px rgba(0, 0, 0, 0.5);
+  }
