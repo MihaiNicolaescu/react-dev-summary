@@ -5,6 +5,16 @@ import "./style/main.css";
 import "./style/description.css";
 import "./style/skills.css";
 
+const skills = [
+    {name:  "Coding 💻"},
+    {name: "Database 🗄️"},
+    {name: "Web Development 🌐"},
+    {name: "Mobile Apps 📱"},
+    {name: "Problem Solving 🧩"},
+    {name: "Testing 🧪"},
+    {name: "DevOps 🚀"}
+];
+
 function App(){
     return (
     <div className="container">
@@ -35,25 +45,17 @@ function Description(){
 function Skills(){
     return (
         <div className="skills">
-            <Skill skill="Coding 💻"/>
-            <Skill skill="Database 🗄️"/>
-            <Skill skill="Web Development 🌐"/>
-            <Skill skill="Mobile Apps 📱"/>
-            <Skill skill="Problem Solving 🧩"/>
-            <Skill skill="Testing 🧪"/>
-            <Skill skill="DevOps 🚀"/>
-            <Skill skill="Analysis 📊"/>
-            <Skill skill="Version Control 🛠️"/>
-            <Skill skill="Learning 📚"/>
-            <Skill skill="Dragon 🐉"/>
+            {skills.map((data) => (
+                <Skill skill={data} />
+            ))}
         </div>
     )
 }
 
 function Skill(props){
     return (
-        <div class="skill">
-            <p>{props.skill}</p>
+        <div className="skill">
+            <p>{props.skill.name}</p>
         </div>
     )
 }
