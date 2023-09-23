@@ -6,13 +6,26 @@ import "./style/description.css";
 import "./style/skills.css";
 
 const skills = [
-    {name:  "Coding 💻"},
-    {name: "Database 🗄️"},
-    {name: "Web Development 🌐"},
-    {name: "Mobile Apps 📱"},
-    {name: "Problem Solving 🧩"},
-    {name: "Testing 🧪"},
-    {name: "DevOps 🚀"}
+    {
+        name:  "Coding",
+        level: "Advanced",
+        color: "#C3DCAF",
+    },
+    {
+        name:  "PhP",
+        level: "Advanced",
+        color: "#E84F33",
+    },
+    {
+        name:  "Javascript",
+        level: "Advanced",
+        color: "#60DAFB",
+    },
+    {
+        name:  "React",
+        level: "Beginner",
+        color: "#FF0066",
+    },
 ];
 
 function App(){
@@ -52,10 +65,10 @@ function Skills(){
     )
 }
 
-function Skill(props){
+function Skill({skill}){
     return (
-        <div className="skill">
-            <p>{props.skill.name}</p>
+        <div className="skill-wrapper">
+            <p style={{"background-color": skill.color}} className="skill">{skill.name} {skill.level === "Advanced" ? "💪" : "🪫"}</p>
         </div>
     )
 }

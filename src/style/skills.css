@@ -11,11 +11,13 @@
     padding: 8px 12px;
     border-radius: 5px;
     font-size: 14px;
+  }
+  
+  .skill-wrapper{
     transition: transform 0.3s ease-in;
   }
 
-  .skill:hover{
+  .skill-wrapper:hover{
     transform: scale(1.2);
-    background-color: #89CFF0;
     font-size: 18px;
   }
